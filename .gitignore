@@ -1,0 +1,30 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# compile database
+compile_commands.json
+
+# cache
+.cache/
+
+# JetBrains IDE
+.idea/
+
+# VSCode cache
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Python cache
+__pycache__/
+*.pyc
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+
+# OS
+.DS_Store
