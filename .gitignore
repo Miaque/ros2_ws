@@ -18,6 +18,7 @@ compile_commands.json
 !.vscode/settings.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/tasks.json
 
 # Python cache
 __pycache__/
