@@ -25,6 +25,8 @@
     "/opt/ros/jazzy/lib/python3.12/site-packages"
   ],
   "files.exclude": {
-    ".cache": true
+    ".cache": true,
+    ".history": true,
+    ".idea": true
   }
 }
