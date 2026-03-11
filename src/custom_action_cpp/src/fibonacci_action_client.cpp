@@ -66,7 +66,7 @@ public:
       for (auto number : feedback->partial_sequence) {
         ss << number << " ";
       }
-      RCLCPP_INFO(this->get_logger(), ss.str().c_str());
+      RCLCPP_INFO(this->get_logger(), "%s", ss.str().c_str());
     };
 
     send_goal_options.result_callback = [this](const GoalHandleFibonacci::WrappedResult & result)
@@ -89,7 +89,7 @@ public:
       for (auto number : result.result->sequence) {
         ss << number << " ";
       }
-      RCLCPP_INFO(this->get_logger(), ss.str().c_str());
+      RCLCPP_INFO(this->get_logger(), "%s", ss.str().c_str());
       rclcpp::shutdown();
     };
     this->client_ptr_->async_send_goal(goal_msg, send_goal_options);
