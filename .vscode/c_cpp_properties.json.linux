@@ -3,8 +3,8 @@
     {
       "name": "ros2",
       "compileCommands": "${workspaceFolder}/compile_commands.json",
-      "intelliSenseMode": "windows-clang-x64",
-      "compilerPath": "H:\\software\\LLVM\\bin\\clang++.exe",
+      "intelliSenseMode": "linux-clang-x64",
+      "compilerPath": "/usr/bin/clang++",
       "cStandard": "gnu11",
       "cppStandard": "c++17"
     }

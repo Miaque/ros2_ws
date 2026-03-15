@@ -1,28 +1,25 @@
 {
   "ROS2.distro": "jazzy",
-
   "cmake.configureOnOpen": false,
   "cmake.configureArgs": [
-    "-DPython3_EXECUTABLE=/usr/bin/python3",
-    "-DCMAKE_C_COMPILER=/usr/bin/clang",
-    "-DCMAKE_CXX_COMPILER=/usr/bin/clang++"
+    "-DPython3_EXECUTABLE=C:\\pixi_ws\\.pixi\\envs\\default\\python.exe",
+    "-DCMAKE_C_COMPILER=H:\\software\\LLVM\\bin\\clang.exe",
+    "-DCMAKE_CXX_COMPILER=H:\\software\\LLVM\\bin\\clang++.exe"
   ],
-
   "C_Cpp.intelliSenseEngine": "disabled",
   "clangd.arguments": [
     "--compile-commands-dir=${workspaceFolder}",
     "--background-index",
     "--header-insertion=never"
   ],
-
-  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.defaultInterpreterPath": "C:\\pixi_ws\\.pixi\\envs\\default\\python.exe",
   "python.analysis.extraPaths": [
-    "/opt/ros/jazzy/lib/python3.12/site-packages"
+    "C:\\pixi_ws\\.pixi\\envs\\default\\Lib\\site-packages"
   ],
   "python.autoComplete.extraPaths": [
-    "/home/ubuntu/workspace/ros2_ws/build/my_package",
-    "/home/ubuntu/workspace/ros2_ws/install/my_package/lib/python3.12/site-packages",
-    "/opt/ros/jazzy/lib/python3.12/site-packages"
+    "H:\\workspace\\ROS2\\ros2_ws\\build\\my_package",
+    "H:\\workspace\\ROS2\\ros2_ws\\install\\my_package\\Lib\\site-packages",
+    "C:\\pixi_ws\\ros2-windows\\Lib\\site-packages"
   ],
   "files.exclude": {
     ".cache": true,

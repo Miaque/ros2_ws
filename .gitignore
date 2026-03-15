@@ -14,11 +14,11 @@ compile_commands.json
 
 # VSCode cache
 .vscode/*
-!.vscode/c_cpp_properties.json
-!.vscode/settings.json
+!.vscode/c_cpp_properties.json*
+!.vscode/settings.json*
 !.vscode/launch.json
 !.vscode/extensions.json
-!.vscode/tasks.json
+!.vscode/tasks.json*
 
 # Python cache
 __pycache__/

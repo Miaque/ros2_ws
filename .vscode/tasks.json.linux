@@ -1,0 +1,71 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "rosdep install",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source /opt/ros/jazzy/setup.bash && rosdep install -i --from-path src --rosdistro jazzy -y"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "colcon build: packages up to",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source /opt/ros/jazzy/setup.bash && cd ${workspaceFolder} && colcon build --packages-up-to ${input:rosPackageName} --symlink-install --event-handlers console_direct+ --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "colcon build: selected package",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source /opt/ros/jazzy/setup.bash && cd ${workspaceFolder} && colcon build --packages-select ${input:rosPackageName} --symlink-install --event-handlers console_direct+ --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "colcon build",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "source /opt/ros/jazzy/setup.bash && colcon build --symlink-install --event-handlers console_direct+ --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython3_EXECUTABLE=/usr/bin/python3 -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "rosPackageName",
+      "type": "promptString",
+      "description": "Enter the package name to build",
+      "default": "cpp_srvcli"
+    }
+  ]
+}
