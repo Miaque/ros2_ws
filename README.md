@@ -25,3 +25,8 @@ set PYTHONUTF8=1
 "%VSINSTALLDIR%VC\Auxiliary\Build\vcvars64.bat"
 colcon build --packages-select cpp_pubsub --symlink-install --event-handlers console_direct+ --cmake-args -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 ```
+
+为了方便vscode开发，创建软连接
+```bash
+mklink compile_commands.json build\\compile_commands.json
+```

@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "name": "ros2",
+      "compileCommands": "${workspaceFolder}/compile_commands.json",
+      "intelliSenseMode": "windows-clang-x64",
+      "compilerPath": "H:\\software\\LLVM\\bin\\clang++.exe",
+      "cStandard": "gnu11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}
