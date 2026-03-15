@@ -12,6 +12,24 @@
     "--background-index",
     "--header-insertion=never"
   ],
+  "python.analysis.typeCheckingMode": "basic",
+  "cursorpyright.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "cursorpyright.analysis.autoImportCompletions": true,
+  "python.analysis.indexing": true,
+  "python.analysis.packageIndexDepths": [
+    [
+      "",
+      20,
+      true
+    ]
+  ],
+  "debugpy.debugJustMyCode": true,
+  "python.testing.pytestArgs": [
+    "-s"
+  ],
+  "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
   "python.defaultInterpreterPath": "C:\\pixi_ws\\.pixi\\envs\\default\\python.exe",
   "python.analysis.extraPaths": [
     "C:\\pixi_ws\\.pixi\\envs\\default\\Lib\\site-packages"
@@ -25,5 +43,20 @@
     ".cache": true,
     ".history": true,
     ".idea": true
-  }
+  },
+  "python.languageServer": "None",
+    "python.pyrefly.displayTypeErrors": "force-off",
+    "cursorpyright.disableLanguageServices": false,
+    "python.pyrefly.disableLanguageServices": true,
+    // Using the light mode
+    "indentRainbow.indicatorStyle": "light",
+    // we use a simple 1 pixel wide line
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    // the same colors as above but more visible
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.3)",
+        "rgba(127,255,127,0.3)",
+        "rgba(255,127,255,0.3)",
+        "rgba(79,236,236,0.3)"
+    ]
 }
