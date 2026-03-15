@@ -29,15 +29,16 @@
     "-s"
   ],
   "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
+  "python.testing.pytestEnabled": true,
   "python.defaultInterpreterPath": "C:\\pixi_ws\\.pixi\\envs\\default\\python.exe",
   "python.analysis.extraPaths": [
     "C:\\pixi_ws\\.pixi\\envs\\default\\Lib\\site-packages"
   ],
   "python.autoComplete.extraPaths": [
+    "C:\\pixi_ws\\.pixi\\envs\\default\\Lib\\site-packages",
+    "C:\\pixi_ws\\ros2-windows\\Lib\\site-packages",
     "H:\\workspace\\ROS2\\ros2_ws\\build\\my_package",
     "H:\\workspace\\ROS2\\ros2_ws\\install\\my_package\\Lib\\site-packages",
-    "C:\\pixi_ws\\ros2-windows\\Lib\\site-packages"
   ],
   "files.exclude": {
     ".cache": true,
@@ -45,18 +46,22 @@
     ".idea": true
   },
   "python.languageServer": "None",
-    "python.pyrefly.displayTypeErrors": "force-off",
-    "cursorpyright.disableLanguageServices": false,
-    "python.pyrefly.disableLanguageServices": true,
-    // Using the light mode
-    "indentRainbow.indicatorStyle": "light",
-    // we use a simple 1 pixel wide line
-    "indentRainbow.lightIndicatorStyleLineWidth": 1,
-    // the same colors as above but more visible
-    "indentRainbow.colors": [
-        "rgba(255,255,64,0.3)",
-        "rgba(127,255,127,0.3)",
-        "rgba(255,127,255,0.3)",
-        "rgba(79,236,236,0.3)"
-    ]
+  "python.pyrefly.displayTypeErrors": "force-off",
+  "cursorpyright.disableLanguageServices": true,
+  "python.pyrefly.disableLanguageServices": false,
+  // Using the light mode
+  "indentRainbow.indicatorStyle": "light",
+  // we use a simple 1 pixel wide line
+  "indentRainbow.lightIndicatorStyleLineWidth": 1,
+  // the same colors as above but more visible
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.3)",
+    "rgba(127,255,127,0.3)",
+    "rgba(255,127,255,0.3)",
+    "rgba(79,236,236,0.3)"
+  ],
+  "cursorpyright.analysis.extraPaths": [
+    "C:\\pixi_ws\\.pixi\\envs\\default\\Lib\\site-packages",
+    "C:\\pixi_ws\\ros2-windows\\Lib\\site-packages"
+  ],
 }

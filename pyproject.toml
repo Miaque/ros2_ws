@@ -1,0 +1,9 @@
+[tool.pyrefly]
+# 强制 Pyrefly 使用 pixi 的 Python（解决忽略 Select Interpreter 的 bug）
+python-interpreter-path = "C:\\pixi_ws\\.pixi\\envs\\default\\python.exe"
+
+# 显式添加 ROS2 的 site-packages（保险起见，Pyrefly 会自动查询，但 pixi 有时不准）
+site-package-path = ["C:\\pixi_ws\\ros2-windows\\Lib\\site-packages"]
+
+# 可选：如果还想彻底关闭 missing-import 红波浪（推荐先不加，测试成功后再加）
+# errors.missing-import = false
