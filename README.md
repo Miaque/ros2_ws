@@ -4,12 +4,16 @@
 
 ```bash
 set VSINSTALLDIR=H:\\software\\Microsoft Visual Studio\\2022\\Professional\\
+set ROS2_PY=C:\\pixi_ws\\.pixi\\envs\\default
+set ROS2_ROOT=C:\\pixi_ws\\ros2-windows
 ```
 
 测试是否生效
 
 ```bash
 echo %VSINSTALLDIR%
+echo %ROS2_PY%
+echo %ROS2_ROOT%
 ```
 
 以管理员的方式打开"Developer Command Prompt for VS 2022", 
