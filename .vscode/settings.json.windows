@@ -2,9 +2,9 @@
   "ROS2.distro": "jazzy",
   "cmake.configureOnOpen": false,
   "cmake.configureArgs": [
-    "-DPython3_EXECUTABLE=C:\\pixi_ws\\.pixi\\envs\\default\\python.exe",
-    "-DCMAKE_C_COMPILER=H:\\software\\LLVM\\bin\\clang.exe",
-    "-DCMAKE_CXX_COMPILER=H:\\software\\LLVM\\bin\\clang++.exe"
+    "-DPython3_EXECUTABLE=${env:ROS2_PY}\\python.exe",
+    "-DCMAKE_C_COMPILER=${env:VSINSTALLDIR}\\VC\\Tools\\Llvm\\bin\\clang.exe",
+    "-DCMAKE_CXX_COMPILER=${env:VSINSTALLDIR}\\VC\\Tools\\Llvm\\bin\\clang++.exe"
   ],
   "C_Cpp.intelliSenseEngine": "disabled",
   "clangd.arguments": [
@@ -30,15 +30,15 @@
   ],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
-  "python.defaultInterpreterPath": "C:\\pixi_ws\\.pixi\\envs\\default\\python.exe",
+  "python.defaultInterpreterPath": "${env:ROS2_PY}\\python.exe",
   "python.analysis.extraPaths": [
-    "C:\\pixi_ws\\.pixi\\envs\\default\\Lib\\site-packages"
+    "${env:ROS2_PY}\\Lib\\site-packages"
   ],
   "python.autoComplete.extraPaths": [
-    "C:\\pixi_ws\\.pixi\\envs\\default\\Lib\\site-packages",
-    "C:\\pixi_ws\\ros2-windows\\Lib\\site-packages",
-    "H:\\workspace\\ROS2\\ros2_ws\\build\\my_package",
-    "H:\\workspace\\ROS2\\ros2_ws\\install\\my_package\\Lib\\site-packages",
+    "${env:ROS2_PY}\\Lib\\site-packages",
+    "${env:ROS2_ROOT}\\Lib\\site-packages",
+    "${workspaceFolder}\\build\\my_package",
+    "${workspaceFolder}\\install\\my_package\\Lib\\site-packages",
   ],
   "files.exclude": {
     ".cache": true,
@@ -62,7 +62,7 @@
     "rgba(79,236,236,0.3)"
   ],
   "cursorpyright.analysis.extraPaths": [
-    "C:\\pixi_ws\\.pixi\\envs\\default\\Lib\\site-packages",
-    "C:\\pixi_ws\\ros2-windows\\Lib\\site-packages"
+    "${env:ROS2_PY}\\Lib\\site-packages",
+    "${env:ROS2_ROOT}\\Lib\\site-packages"
   ],
 }
