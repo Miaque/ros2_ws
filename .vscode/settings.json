@@ -3,8 +3,8 @@
   "cmake.configureOnOpen": false,
   "cmake.configureArgs": [
     "-DPython3_EXECUTABLE=${env:ROS2_PY}\\python.exe",
-    "-DCMAKE_C_COMPILER=${env:VSINSTALLDIR}\\VC\\Tools\\Llvm\\bin\\clang.exe",
-    "-DCMAKE_CXX_COMPILER=${env:VSINSTALLDIR}\\VC\\Tools\\Llvm\\bin\\clang++.exe"
+    "-DCMAKE_C_COMPILER=${env:VSINSTALLDIR}VC\\Tools\\Llvm\\bin\\clang.exe",
+    "-DCMAKE_CXX_COMPILER=${env:VSINSTALLDIR}VC\\Tools\\Llvm\\bin\\clang++.exe"
   ],
   "C_Cpp.intelliSenseEngine": "disabled",
   "clangd.arguments": [
