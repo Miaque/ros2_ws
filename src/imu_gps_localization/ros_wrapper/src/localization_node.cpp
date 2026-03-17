@@ -1,23 +1,22 @@
 #include <memory>
 
 #include <glog/logging.h>
-#include <ros/ros.h>
-#include <sensor_msgs/Imu.h>
-#include <sensor_msgs/NavSatFix.h>
+#include <rclcpp/rclcpp.hpp>
 
 #include "localization_wrapper.h"
 
-int main (int argc, char** argv) {
-    // Set glog.
+int main(int argc, char** argv)
+{
+    // Initialize glog.
     FLAGS_colorlogtostderr = true;
+    google::InitGoogleLogging(argv[0]);
 
-    // Initialize ros.
-    ros::init(argc, argv, "imu_gps_localization");
-    ros::NodeHandle nh;
-    
-    // Initialize localizer.
-    LocalizationWrapper localizer(nh);
+    // Initialize ROS2.
+    rclcpp::init(argc, argv);
 
-    ros::spin();
-    return 1;
+    auto node = std::make_shared<LocalizationWrapper>();
+    rclcpp::spin(node);
+
+    rclcpp::shutdown();
+    return 0;
 }
