@@ -3,5 +3,10 @@
     "superpowers@superpowers-marketplace": true,
     "everything-claude-code@everything-claude-code": true,
     "claude-mem@thedotmack": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep:*)"
+    ]
   }
 }
