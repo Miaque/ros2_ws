@@ -20,10 +20,9 @@ echo %ROS2_ROOT%
 终端路径 `%VSINSTALLDIR%Common7\\Tools\\VsDevCmd.bat`
 
 ```bash
-cd C:\\pixi_ws
+cd /d C:\\pixi_ws
 pixi shell
-cd H:\\workspace\\ROS2\\ros2_ws
-H:
+cd /d H:\\workspace\\ROS2\\ros2_ws
 call C:\\pixi_ws\\ros2-windows\\local_setup.bat
 set PYTHONUTF8=1
 "%VSINSTALLDIR%VC\Auxiliary\Build\vcvars64.bat"
@@ -33,4 +32,14 @@ colcon build --packages-select cpp_pubsub --symlink-install --event-handlers con
 为了方便vscode开发，创建软连接
 ```bash
 mklink compile_commands.json build\\compile_commands.json
+```
+
+## 安装依赖
+
+第一次需要执行初始化
+
+```
+pip install rosdep
+rosdep init
+rosdep update
 ```

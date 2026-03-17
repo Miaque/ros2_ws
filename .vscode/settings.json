@@ -44,7 +44,8 @@
     ".cache": true,
     ".history": true,
     ".idea": true,
-    ".pytest_cache": true
+    ".pytest_cache": true,
+    "**/__pycache__": true
   },
   "python.languageServer": "None",
   "python.pyrefly.displayTypeErrors": "force-off",
