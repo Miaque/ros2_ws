@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(imu_gps_localizer)
 
 find_package(Eigen3 REQUIRED)
+find_package(glog REQUIRED)
 
 # 第三方：GeographicLib
 add_subdirectory(third_party/GeographicLib)
@@ -22,6 +23,8 @@ target_include_directories(imu_gps_localizer_lib PUBLIC
 target_compile_features(imu_gps_localizer_lib PUBLIC cxx_std_17)
 
 target_link_libraries(imu_gps_localizer_lib
+  PUBLIC
+    glog::glog
   Eigen3::Eigen
   libGeographiccc
 )

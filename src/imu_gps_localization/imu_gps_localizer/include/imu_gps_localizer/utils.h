@@ -5,8 +5,9 @@
 
 namespace ImuGpsLocalization {
 
-constexpr double kDegreeToRadian = M_PI / 180.;
-constexpr double kRadianToDegree = 180. / M_PI;
+constexpr double pi = 3.14159265358979323846;
+constexpr double kDegreeToRadian = pi / 180.;
+constexpr double kRadianToDegree = 180. / pi;
 
 inline void ConvertLLAToENU(const Eigen::Vector3d& init_lla, 
                             const Eigen::Vector3d& point_lla, 

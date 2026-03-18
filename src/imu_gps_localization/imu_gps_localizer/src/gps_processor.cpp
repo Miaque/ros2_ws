@@ -23,6 +23,8 @@ bool GpsProcessor::UpdateStateByGpsPosition(const Eigen::Vector3d& init_lla, con
     // Covarance.
     const Eigen::MatrixXd I_KH = Eigen::Matrix<double, 15, 15>::Identity() - K * H;
     state->cov = I_KH * P * I_KH.transpose() + K * V * K.transpose();
+
+    return true;
 }
 
 void GpsProcessor::ComputeJacobianAndResidual(const Eigen::Vector3d& init_lla,  
